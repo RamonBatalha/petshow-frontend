@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+ul {
+    list-style: none;
+}
+
+nav {
+    width: 100vw;
+    height: 10vh;
+    background-color: white;
+    border-bottom: solid 2px black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    
+}
+
+nav ul {
+    width: 30vw;
+    display: flex;
+    justify-content: right;
+    gap: 15px;
+    /* border: solid 2px red; */
+    font-size: 20px;
+}
+
+#texto-logo{
+    font-size: 25px;
+}
+
+
+

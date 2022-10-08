@@ -1,0 +1,12 @@
+
+<section>
+    <h1>Adicionar Novo Cliente</h1>
+    <form [formGroup]="updateCliente">
+        <p>Nome: <input type="text" name="nome" value="Ramon"  formControlName="nome"></p>
+        <p>CPF: <input type="text" name="cpf" formControlName="cpf"></p>
+        <p>Endereço: <input type="text" name="endereco" formControlName="endereco" ></p>
+        <p>E-mail: <input type="text" name="email" formControlName="email"></p>
+        <p>Telefone: <input type="text" name="telefone" formControlName="telefone"></p>
+        <button type="button">Atualizar</button>
+    </form>
+</section>

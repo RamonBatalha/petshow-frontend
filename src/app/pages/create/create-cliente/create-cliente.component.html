@@ -1,0 +1,91 @@
+
+<section>
+    <h1>Adicionar Novo Cliente</h1>
+    <form [formGroup]="formCliente">
+        <p>Nome</p>
+        <input 
+            type="text" 
+            placeholder="Nome do Cliente" 
+            formControlName="nome"
+            [class.valid]="formCliente.controls['nome'].valid"
+            [class.invalid]="formCliente.controls['nome'].invalid && (formCliente.controls['nome'].touched || formCliente.controls['nome'].dirty)"
+            >
+        <div *ngIf="formCliente.controls['nome'].invalid && (formCliente.controls['nome'].touched || formCliente.controls['nome'].dirty)">
+             <small *ngIf="formCliente.controls['nome'].hasError('required')">
+                  Esse campo é obrigatório
+             </small>
+             <small *ngIf="formCliente.controls['nome'].hasError('maxLength')">
+                  Tamanho máximo 80 caracteres
+             </small>
+        </div>
+        <p>CPF</p>
+        <input 
+            type="text"
+            placeholder="CPF do Cliente" 
+            formControlName="cpf"
+            [class.valid]="formCliente.controls['cpf'].valid"
+            [class.invalid]="formCliente.controls['cpf'].invalid && (formCliente.controls['cpf'].touched || formCliente.controls['cpf'].dirty)"
+            >
+            <div *ngIf="formCliente.controls['cpf'].invalid && (formCliente.controls['cpf'].touched || formCliente.controls['cpf'].dirty)">
+                <small *ngIf="formCliente.controls['cpf'].hasError('required')">
+                     Esse campo é obrigatório
+                </small>
+                <small *ngIf="formCliente.controls['cpf'].hasError('maxLength')">
+                     Tamanho máximo 30 caracteres
+                </small>
+           </div>
+        <p>Endereço</p>
+        <input 
+        type="text"
+        placeholder="Endereço do Cliente" 
+        formControlName="endereco"
+        [class.valid]="formCliente.controls['endereco'].valid"
+        [class.invalid]="formCliente.controls['endereco'].invalid && (formCliente.controls['endereco'].touched || formCliente.controls['endereco'].dirty)"
+        >
+        <div *ngIf="formCliente.controls['endereco'].invalid && (formCliente.controls['endereco'].touched || formCliente.controls['endereco'].dirty)">
+            <small *ngIf="formCliente.controls['endereco'].hasError('required')">
+                 Esse campo é obrigatório
+            </small>
+            <small *ngIf="formCliente.controls['endereco'].hasError('maxLength')">
+                 Tamanho máximo 80 caracteres
+            </small>
+       </div>
+        <p>E-mail</p>
+        <input 
+        type="text"
+        placeholder="E-mail do Cliente" 
+        formControlName="email"
+        [class.valid]="formCliente.controls['email'].valid"
+        [class.invalid]="formCliente.controls['email'].invalid && (formCliente.controls['email'].touched || formCliente.controls['email'].dirty)"
+        >
+        <div *ngIf="formCliente.controls['email'].invalid && (formCliente.controls['email'].touched || formCliente.controls['email'].dirty)">
+            <small *ngIf="formCliente.controls['email'].hasError('required')">
+                 Esse campo é obrigatório
+            </small>
+            <small *ngIf="formCliente.controls['email'].hasError('maxLength')">
+                 Tamanho máximo 80 caracteres
+            </small>
+            <small *ngIf="formCliente.controls['email'].hasError('email')">
+                 Digite um e-mail válido
+            </small>
+       </div>
+        <p>Telefone</p>
+        <input 
+        type="text"
+        placeholder="E-mail do Cliente" 
+        formControlName="telefone"
+        [class.valid]="formCliente.controls['telefone'].valid"
+        [class.invalid]="formCliente.controls['telefone'].invalid && (formCliente.controls['telefone'].touched || formCliente.controls['telefone'].dirty)"
+        >
+        <div *ngIf="formCliente.controls['telefone'].invalid && (formCliente.controls['telefone'].touched || formCliente.controls['telefone'].dirty)">
+            <small *ngIf="formCliente.controls['telefone'].hasError('required')">
+                 Esse campo é obrigatório
+            </small>
+            <small *ngIf="formCliente.controls['telefone'].hasError('maxLength')">
+                 Tamanho máximo 50 caracteres
+            </small>
+       </div>
+       
+        <button type="button" (click)="adicionarCliente()">Adicionar</button>
+    </form>
+</section>

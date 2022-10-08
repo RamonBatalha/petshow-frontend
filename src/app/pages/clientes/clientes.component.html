@@ -1,0 +1,19 @@
+
+<section>
+    <h1>Lista de Clientes</h1>
+    <button type="button" (click)="irPaginaAdicionar()">Adicionar novo Cliente</button>
+    <div *ngFor="let clientes of clientes" class="div-inf-cliente" >
+        <p>Nome: {{clientes.nome}}</p>
+        <div class="div-btn-cliente">
+            <a (click)="irPaginaCliente(clientes.id)">ver informações</a>
+            <a >
+                <fa-icon [icon]="faPen" routerLink="update-cliente/{{clientes.id}}"></fa-icon>
+            </a>
+            <a (click)="removerCliente(clientes.id)">
+                <fa-icon [icon]="faTrash"></fa-icon>
+            </a>
+        </div>
+    </div>
+</section>
+
+
