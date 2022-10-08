@@ -1,10 +1,12 @@
 <section>
     <h1>Dados do Cliente</h1>
     
-    <p>Numero Identificador: {{id}}</p>
-    <p>Nome: {{nome}}</p>
-    <p>CPF: {{cpf}}</p>
-    <p>Email: {{email}}</p>
-    <p>Endereço: {{endereco}}</p>
-    <p>Telefone: {{telefone}}</p>
+    <div>
+        <p><span>Número Identificador:</span> {{id}}</p>
+        <p><span>Nome:</span> {{nome}}</p>
+        <p><span>CPF:</span> {{cpf | mask: '000.000.000-00' }}</p>
+        <p><span>Email:</span> {{email}}</p>
+        <p><span>Endereço:</span> {{endereco}}</p>
+        <p><span>Telefone:</span> {{telefone | mask: '(00) 00000-0000'}}</p>
+    </div>
 </section>

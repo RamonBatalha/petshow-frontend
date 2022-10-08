@@ -14,6 +14,7 @@ import { CreateClienteComponent } from './pages/create/create-cliente/create-cli
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InformacaoClientesComponent } from './pages/clientes/informacao-clientes/informacao-clientes.component';
 import { UpdateClienteComponent } from './pages/update/update-cliente/update-cliente.component';
+import { NgxMaskModule} from 'ngx-mask';
 
 
 
@@ -32,7 +33,7 @@ import { UpdateClienteComponent } from './pages/update/update-cliente/update-cli
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FontAwesomeModule, FormsModule, ReactiveFormsModule
+    FontAwesomeModule, FormsModule, ReactiveFormsModule, NgxMaskModule.forRoot()
   ],
   providers: [ClientesService, HttpClientModule],
   bootstrap: [AppComponent]

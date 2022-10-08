@@ -22,6 +22,7 @@
         <input 
             type="text"
             placeholder="CPF do Cliente" 
+            mask="000.000.000-00"
             formControlName="cpf"
             [class.valid]="formCliente.controls['cpf'].valid"
             [class.invalid]="formCliente.controls['cpf'].invalid && (formCliente.controls['cpf'].touched || formCliente.controls['cpf'].dirty)"
@@ -72,7 +73,8 @@
         <p>Telefone</p>
         <input 
         type="text"
-        placeholder="E-mail do Cliente" 
+        placeholder="Telefone do Cliente" 
+        mask="(00) 00000-0000"
         formControlName="telefone"
         [class.valid]="formCliente.controls['telefone'].valid"
         [class.invalid]="formCliente.controls['telefone'].invalid && (formCliente.controls['telefone'].touched || formCliente.controls['telefone'].dirty)"
@@ -84,8 +86,8 @@
             <small *ngIf="formCliente.controls['telefone'].hasError('maxLength')">
                  Tamanho máximo 50 caracteres
             </small>
-       </div>
+       </div> <br> <br> 
        
-        <button type="button" (click)="adicionarCliente()">Adicionar</button>
+        <button type="button" (click)="adicionarCliente()" [disabled]="!formCliente.valid">Adicionar</button>
     </form>
 </section>

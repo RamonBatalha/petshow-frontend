@@ -1,6 +1,16 @@
+* {
+    font-size: 15px;
+}
+
 section {
     display: flex;
     align-items: center;
+    justify-content: left;
     flex-direction: column;
     width: 100vw;
+    
+}
+
+span {
+    font-weight: bold;
 }

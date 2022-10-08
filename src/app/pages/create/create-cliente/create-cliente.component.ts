@@ -14,24 +14,24 @@ export class CreateClienteComponent implements OnInit {
   formCliente = this.fb.group({
     nome: ["", [
       Validators.required,
-      Validators.maxLength(5)
+      // Validators.maxLength(5)
     ]],
     cpf: ["", [
       Validators.required,
-      Validators.maxLength(30)
+      // Validators.maxLength(30)
     ]], 
     endereco: ["", [
       Validators.required,
-      Validators.maxLength(80)
+      // Validators.maxLength(80)
     ]],
     email: ["", [
       Validators.required,
       Validators.email,
-      Validators.maxLength(50)
+      // Validators.maxLength(50)
     ]],
     telefone: ["", [
       Validators.required,
-      Validators.maxLength(50)
+      // Validators.maxLength(50)
     ]],
     
   })

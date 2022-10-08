@@ -1,3 +1,7 @@
+* {
+    font-size: 15px;
+}
+
 section {
     display: flex;
     align-items: center;
@@ -7,6 +11,10 @@ section {
 
 a{
     cursor: pointer;
+}
+
+a:hover {
+    color: red
 }
 
 .div-inf-cliente {

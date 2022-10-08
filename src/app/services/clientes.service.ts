@@ -26,6 +26,11 @@ export class ClientesService {
    return this.http.post("http://localhost:8080/api/v1/cliente", cliente);
   }
 
+  //
+  atualizarCliente(cliente: any): Observable<any> {
+   return this.http.post("http://localhost:8080/api/v1/cliente", cliente);
+  }
+
   // recebe a url de requisição e o objeto que vai ser passado
    removerCliente(id: string) {
    return this.http.delete("http://localhost:8080/api/v1/cliente/".concat(id));
