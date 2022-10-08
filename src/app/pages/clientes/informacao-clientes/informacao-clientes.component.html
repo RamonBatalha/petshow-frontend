@@ -1,6 +1,7 @@
 <section>
     <h1>Dados do Cliente</h1>
     
+    <!-- renderização de dados de cliente por id -->
     <div>
         <p><span>Número Identificador:</span> {{id}}</p>
         <p><span>Nome:</span> {{nome}}</p>
@@ -9,4 +10,32 @@
         <p><span>Endereço:</span> {{endereco}}</p>
         <p><span>Telefone:</span> {{telefone | mask: '(00) 00000-0000'}}</p>
     </div>
+     
+    <!-- renderização dados de pets vinculados -->
+    <section> 
+      <h2>Pets vinculados</h2>
+      <button type="button" (click)="irPaginaCriarPet()">Adicionar novo Pet</button> 
+      <div *ngFor="let pets of pets" class="div-pets" >
+         <p> <span>Nome: </span>{{pets.nome}}</p>
+         <p> <span>Espécie: </span>{{pets.especie}}</p>
+         <p> <span>Sexo: </span>{{pets.sexo}}</p>
+         <p> <span>idade: </span>{{pets.idade}}</p>
+         <p> <span>peso: </span>{{pets.peso}}</p>
+         <div class="div-icons">
+           <a (click)="atualizarPet(pets.id)">
+               <fa-icon [icon]="faPen"></fa-icon>
+           </a>
+           <a (click)="removerPet(pets.id)">
+               <fa-icon [icon]="faTrash"></fa-icon>
+           </a>
+         </div>
+      </div>
+   </section>
+
+   <!-- Array pets maior que 0 (tem pet vinculado) renderiza uma div vazia, caso contrário (sem pet vinculado) renderiza o ng-template -->
+   <div *ngIf="pets.length > 0; else semProduto" >
+   </div>
+   
+       <ng-template #semProduto ><div class="sem-pet">Não existe pet vinculado ao cliente</div></ng-template>
+   
 </section>

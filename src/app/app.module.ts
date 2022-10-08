@@ -15,6 +15,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InformacaoClientesComponent } from './pages/clientes/informacao-clientes/informacao-clientes.component';
 import { UpdateClienteComponent } from './pages/update/update-cliente/update-cliente.component';
 import { NgxMaskModule} from 'ngx-mask';
+import { ErrorComponent } from './pages/error/error.component';
+import { CreatePetComponent } from './pages/create/create-pet/create-pet.component';
+import { UpdatePetComponent } from './pages/update/update-pet/update-pet.component';
+
 
 
 
@@ -26,7 +30,10 @@ import { NgxMaskModule} from 'ngx-mask';
     ClientesComponent,
     CreateClienteComponent,
     InformacaoClientesComponent,
-    UpdateClienteComponent 
+    UpdateClienteComponent,
+    ErrorComponent,
+    CreatePetComponent,
+    UpdatePetComponent
   ],
   imports: [
     BrowserModule,

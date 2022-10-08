@@ -17,15 +17,21 @@ a:hover {
     color: red
 }
 
+span {
+    font-weight: bold;
+}
+
 .div-inf-cliente {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 50vw;
+    width: 60vw;
     border: 0.5px solid rgba(160, 155, 155, 0.596);
+    border-bottom: 5px solid #0a2775;
     border-radius: 5px;
     margin: 10px;
     padding: 5px;
+    box-shadow: 0px 5px 5px rgb(162, 173, 177);
 
 }
 
