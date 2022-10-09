@@ -43,10 +43,10 @@ export class CreatePetComponent implements OnInit {
 
 
 
-  constructor(private fb: FormBuilder, private route: ActivatedRoute, private petService: PetService) { }
+  constructor(private fb: FormBuilder, private router: ActivatedRoute, private petService: PetService, private route: Router) { }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
+    this.router.paramMap.subscribe(params => {
       //buscando o id na URL
       this.idCliente = params.get("id")
       
@@ -89,7 +89,8 @@ export class CreatePetComponent implements OnInit {
       alert("Pet Criado com Sucesso: ");
       //limpando campo de input
       this.formPet.reset();
-      //limpar campo de input
+      //redirecionar para página do cliente
+      this.route.navigate([`info-cliente/${pet.cliente.id}`]); 
       
     }, err => {
       console.log("Erro ao cadastrar Pet", err)

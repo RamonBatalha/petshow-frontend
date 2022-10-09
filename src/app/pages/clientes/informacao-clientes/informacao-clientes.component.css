@@ -19,6 +19,10 @@ a {
    cursor: pointer
 }
 
+a:hover {
+    color: red;
+}
+
 
 .div-pets{
     margin:  5px;

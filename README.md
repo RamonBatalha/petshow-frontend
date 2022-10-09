@@ -32,7 +32,14 @@ Outras funcionalidades serão adicionadas com o decorrer do projeto
 
 ## Funcionalidades Implementadas
 
-- CRUD para cadastro de Clientes com validação de formulários e rotas definidas
+- CRUD para cadastro de Clientes com validação de formulários e rotas definidas 
+- CRUD para cadastro de Pets com validação de formulários e rotas definidas
+- Todos os dados são armazenados no Banco de Dados ORACLE
+- Adicionada validações de formulário e Mascaras para dados numéricos
+
+![Adicionar Cliente](gitimages\adicionarcliente.gif)
+![Adicionar Pet](gitimages\adicionarpet.gif)
+![Adicionar informações](gitimages\atualizarInformações.gif)
 
 
 Projeto em desenvolvimento... 👨‍💻👍😁
