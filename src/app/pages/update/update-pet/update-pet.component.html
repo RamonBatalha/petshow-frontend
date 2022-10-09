@@ -1,1 +1,88 @@
-<p>update-pet works!</p>
+<section>
+    <h1>Adicionar Novo Pet</h1>
+    <form [formGroup]="formPet">
+        <p>Nome</p>
+        <input 
+            type="text" 
+            placeholder="Nome do Pet" 
+            formControlName="nome"
+            [class.valid]="formPet.controls['nome'].valid"
+            [class.invalid]="formPet.controls['nome'].invalid && (formPet.controls['nome'].touched || formPet.controls['nome'].dirty)"
+            >
+        <div *ngIf="formPet.controls['nome'].invalid && (formPet.controls['nome'].touched || formPet.controls['nome'].dirty)">
+             <small *ngIf="formPet.controls['nome'].hasError('required')">
+                  Esse campo é obrigatório
+             </small>
+             <small *ngIf="formPet.controls['nome'].hasError('maxLength')">
+                  Tamanho máximo 80 caracteres
+             </small>
+        </div>
+        <p>Sexo</p>
+        <input 
+            type="text"
+            placeholder="Sexo do Pet" 
+            formControlName="sexo"
+            [class.valid]="formPet.controls['sexo'].valid"
+            [class.invalid]="formPet.controls['sexo'].invalid && (formPet.controls['sexo'].touched || formPet.controls['sexo'].dirty)"
+            >
+            <div *ngIf="formPet.controls['sexo'].invalid && (formPet.controls['sexo'].touched || formPet.controls['sexo'].dirty)">
+                <small *ngIf="formPet.controls['sexo'].hasError('required')">
+                     Esse campo é obrigatório
+                </small>
+                <small *ngIf="formPet.controls['sexo'].hasError('maxLength')">
+                     Tamanho máximo 30 caracteres
+                </small>
+           </div>
+        <p>Idade</p>
+        <input 
+        type="text"
+        placeholder="Idade do Pet" 
+        formControlName="idade"
+        [class.valid]="formPet.controls['idade'].valid"
+        [class.invalid]="formPet.controls['idade'].invalid && (formPet.controls['idade'].touched || formPet.controls['idade'].dirty)"
+        >
+        <div *ngIf="formPet.controls['idade'].invalid && (formPet.controls['idade'].touched || formPet.controls['idade'].dirty)">
+            <small *ngIf="formPet.controls['idade'].hasError('required')">
+                 Esse campo é obrigatório
+            </small>
+            <small *ngIf="formPet.controls['idade'].hasError('maxLength')">
+                 Tamanho máximo 80 caracteres
+            </small>
+       </div>
+        <p>Espécie</p>
+        <input 
+        type="text"
+        placeholder="Espécie do pet" 
+        formControlName="especie"
+        [class.valid]="formPet.controls['especie'].valid"
+        [class.invalid]="formPet.controls['especie'].invalid && (formPet.controls['especie'].touched || formPet.controls['especie'].dirty)"
+        >
+        <div *ngIf="formPet.controls['especie'].invalid && (formPet.controls['especie'].touched || formPet.controls['especie'].dirty)">
+            <small *ngIf="formPet.controls['especie'].hasError('required')">
+                 Esse campo é obrigatório
+            </small>
+            <small *ngIf="formPet.controls['especie'].hasError('maxLength')">
+                 Tamanho máximo 80 caracteres
+            </small>
+       </div>
+        <p>Peso</p>
+        <input 
+        type="text"
+        placeholder="Peso do Pet" 
+        formControlName="peso"
+        [class.valid]="formPet.controls['peso'].valid"
+        [class.invalid]="formPet.controls['peso'].invalid && (formPet.controls['peso'].touched || formPet.controls['peso'].dirty)"
+        >
+        <div *ngIf="formPet.controls['peso'].invalid && (formPet.controls['peso'].touched || formPet.controls['peso'].dirty)">
+            <small *ngIf="formPet.controls['peso'].hasError('required')">
+                 Esse campo é obrigatório
+            </small>
+            <small *ngIf="formPet.controls['peso'].hasError('maxLength')">
+                 Tamanho máximo 50 caracteres
+            </small>
+       </div> <br> <br>
+       
+       
+        <button type="button" (click)="atualizarPet()" [disabled]="!formPet.valid">Adicionar</button>
+    </form>
+</section>
