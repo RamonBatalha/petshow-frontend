@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "petshow-a7390": {
+      "hosting": {
+        "petshow_front": [
+          "petshow-a7390"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "petshow-a7390"
+  }
+}

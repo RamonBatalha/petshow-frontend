@@ -47,5 +47,14 @@ nav ul {
     font-size: 25px;
 }
 
+button {
+    background-color: transparent;
+    border: solid 2px red;
+    width: 80px;
+}
+
+button:hover {
+    cursor: pointer;
+}
 
 

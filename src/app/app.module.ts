@@ -18,8 +18,11 @@ import { NgxMaskModule} from 'ngx-mask';
 import { ErrorComponent } from './pages/error/error.component';
 import { CreatePetComponent } from './pages/create/create-pet/create-pet.component';
 import { UpdatePetComponent } from './pages/update/update-pet/update-pet.component';
-
-
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { LoginComponent } from './pages/login/login.component';
+import { AngularFireModule } from '@angular/fire/compat';
 
 
 
@@ -34,14 +37,15 @@ import { UpdatePetComponent } from './pages/update/update-pet/update-pet.compone
     UpdateClienteComponent,
     ErrorComponent,
     CreatePetComponent,
-    UpdatePetComponent
+    UpdatePetComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FontAwesomeModule, FormsModule, ReactiveFormsModule, NgxMaskModule.forRoot()
+    FontAwesomeModule, FormsModule, ReactiveFormsModule, NgxMaskModule.forRoot(), provideFirebaseApp(() => initializeApp(environment.firebase)), provideAuth(() => getAuth()), AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [ClientesService, HttpClientModule],
   bootstrap: [AppComponent]

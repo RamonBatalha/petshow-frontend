@@ -36,10 +36,12 @@ Outras funcionalidades serão adicionadas com o decorrer do projeto
 - CRUD para cadastro de Pets com validação de formulários e rotas definidas
 - Todos os dados são armazenados no Banco de Dados ORACLE
 - Adicionada validações de formulário e Mascaras para dados numéricos
+- Adicionado a autenticação de usuário com Firebase e configuradas as proteções de rota com o guard
 
-![Adicionar Cliente](gitimages\adicionarcliente.gif)
-![Adicionar Pet](gitimages\adicionarpet.gif)
-![Adicionar informações](gitimages\atualizarInformações.gif)
+<img src="./gitimages/adicionarcliente.gif">
+<img src="./gitimages/adicionarpet.gif">
+<img src="./gitimages/atualizarInformações.gif">
+
 
 
 Projeto em desenvolvimento... 👨‍💻👍😁

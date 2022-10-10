@@ -1,0 +1,12 @@
+<section>
+    <h2>Login</h2>
+    <div>
+        <label for="email">E-mail</label>
+        <input type="email" name="email" [(ngModel)]="email">
+    </div>
+    <div>
+        <label for="password">Senha</label>
+        <input type="text" name="password" [(ngModel)]="password">
+    </div>
+    <button type="button" (click)="login()">Login</button>
+</section>

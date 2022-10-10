@@ -96,6 +96,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "petshow_front:build:production",
+            "firebaseProject": "petshow-a7390",
+            "firebaseHostingSite": "petshow-a7390"
+          }
         }
       }
     }
