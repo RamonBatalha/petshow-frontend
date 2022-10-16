@@ -1,7 +1,7 @@
 
 <section>
     <h1>Lista de Clientes</h1>
-    <button type="button" (click)="irPaginaAdicionar()">Adicionar novo Cliente</button>
+    <app-button texto="Adicionar novo Cliente" (click)="irPaginaAdicionar()"></app-button>
     <div *ngFor="let clientes of clientes" class="div-inf-cliente" >
         <p><span>Nome:</span> {{clientes.nome}}</p>
         <div class="div-btn-cliente">

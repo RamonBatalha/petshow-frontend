@@ -2,7 +2,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ClientesService } from 'src/app/services/clientes.service';
-import { ClienteModel } from './cliente.model';
 
 @Component({
   selector: 'app-create-cliente',
@@ -14,24 +13,40 @@ export class CreateClienteComponent implements OnInit {
   formCliente = this.fb.group({
     nome: ["", [
       Validators.required,
-      // Validators.maxLength(5)
+      // Validators.maxLength(30)
     ]],
     cpf: ["", [
       Validators.required,
-      // Validators.maxLength(30)
-    ]], 
-    endereco: ["", [
+      // Validators.maxLength(14)
+    ]],
+    logradouro: ["", [
       Validators.required,
       // Validators.maxLength(80)
+    ]],
+    numero: ["", [
+      Validators.required,
+      // Validators.maxLength(10)
+    ]],
+    bairro: ["", [
+      Validators.required,
+      // Validators.maxLength(20)
+    ]],
+    cidade: ["", [
+      Validators.required,
+      // Validators.maxLength(20)
+    ]],
+    estado: ["", [
+      Validators.required,
+      // Validators.maxLength(2)
     ]],
     email: ["", [
       Validators.required,
       Validators.email,
-      // Validators.maxLength(50)
+      // Validators.maxLength(20)
     ]],
     telefone: ["", [
       Validators.required,
-      // Validators.maxLength(50)
+      // Validators.maxLength(20)
     ]],
     
   })

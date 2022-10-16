@@ -25,7 +25,11 @@ export class InformacaoClientesComponent implements OnInit {
   id: number | null = null;
   nome: string = "";
   cpf: string = "";
-  endereco: string = "";
+  logradouro: string = "";
+  numero: string = "";
+  bairro: string = "";
+  cidade: string = "";
+  estado: string = "";
   email: string = "";
   telefone: string = "";
   
@@ -50,7 +54,11 @@ export class InformacaoClientesComponent implements OnInit {
       
       this.nome = clientes.nome;
       this.cpf = clientes.cpf;
-      this.endereco = clientes.endereco;
+      this.logradouro = clientes.logradouro;
+      this.numero = clientes.numero;
+      this.bairro = clientes.bairro;
+      this.cidade = clientes.cidade;
+      this.estado = clientes.estado;
       this.email = clientes.email;
       this.telefone = clientes.telefone;
       // this.nomepet = clientes.pet['nome'];
@@ -72,7 +80,7 @@ export class InformacaoClientesComponent implements OnInit {
   }
     
   
-  removerPet(petId: any) {
+  removerPet(petId: string) {
     console.log("remover pet")
     if (window.confirm('Você tem certeza que deseja deletar o Pet?')) {
 
@@ -89,7 +97,7 @@ export class InformacaoClientesComponent implements OnInit {
     }
   }
 
-  atualizarPet(petId: any) {
+  atualizarPet(petId: unknown) {
     console.log("atualizar pet")
     this.router.navigate([`update-pet/${petId}`]);
   }

@@ -17,24 +17,40 @@ export class UpdateClienteComponent implements OnInit {
   formCliente = this.fb.group({
     nome: ["", [
       Validators.required,
-      // Validators.maxLength(5)
+      // Validators.maxLength(30)
     ]],
     cpf: ["", [
       Validators.required,
-      // Validators.maxLength(30)
-    ]], 
-    endereco: ["", [
+      // Validators.maxLength(14)
+    ]],
+    logradouro: ["", [
       Validators.required,
       // Validators.maxLength(80)
+    ]],
+    numero: ["", [
+      Validators.required,
+      // Validators.maxLength(10)
+    ]],
+    bairro: ["", [
+      Validators.required,
+      // Validators.maxLength(20)
+    ]],
+    cidade: ["", [
+      Validators.required,
+      // Validators.maxLength(20)
+    ]],
+    estado: ["", [
+      Validators.required,
+      // Validators.maxLength(2)
     ]],
     email: ["", [
       Validators.required,
       Validators.email,
-      // Validators.maxLength(50)
+      // Validators.maxLength(20)
     ]],
     telefone: ["", [
       Validators.required,
-      // Validators.maxLength(50)
+      // Validators.maxLength(20)
     ]],
     id: ["", []]
     
@@ -51,24 +67,40 @@ export class UpdateClienteComponent implements OnInit {
       this.formCliente = this.fb.group({
         nome: [result.nome, [
           Validators.required,
-          // Validators.maxLength(5)
+          // Validators.maxLength(30)
         ]],
         cpf: [result.cpf, [
           Validators.required,
-          // Validators.maxLength(30)
+          // Validators.maxLength(14)
         ]], 
-        endereco: [result.endereco, [
+        logradouro: [result.logradouro, [
           Validators.required,
           // Validators.maxLength(80)
+        ]],
+        numero: [result.numero, [
+          Validators.required,
+          // Validators.maxLength(10)
+        ]],
+        bairro: [result.bairro, [
+          Validators.required,
+          // Validators.maxLength(20)
+        ]],
+        cidade: [result.cidade, [
+          Validators.required,
+          // Validators.maxLength(20)
+        ]],
+        estado: [result.estado, [
+          Validators.required,
+          // Validators.maxLength(2)
         ]],
         email: [result.email, [
           Validators.required,
           Validators.email,
-          // Validators.maxLength(50)
+          // Validators.maxLength(20)
         ]],
         telefone: [result.telefone, [
           Validators.required,
-          // Validators.maxLength(50)
+          // Validators.maxLength(20)
         ]],
         id: [result.id]
         

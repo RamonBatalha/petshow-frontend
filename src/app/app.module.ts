@@ -23,6 +23,7 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { LoginComponent } from './pages/login/login.component';
 import { AngularFireModule } from '@angular/fire/compat';
+import { ButtonComponent } from './elementos/button/button.component';
 
 
 
@@ -38,7 +39,8 @@ import { AngularFireModule } from '@angular/fire/compat';
     ErrorComponent,
     CreatePetComponent,
     UpdatePetComponent,
-    LoginComponent
+    LoginComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
