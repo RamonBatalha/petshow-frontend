@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ClienteModel } from '../pages/create/create-cliente/cliente.model';
+
 
 @Injectable({
   providedIn: 'root'
@@ -22,12 +22,12 @@ export class ClientesService {
   }
   
   // recebe a url de requisição e o objeto que vai ser passado
-  adicionarCliente(cliente: any): Observable<any> {
+  adicionarCliente(cliente: unknown): Observable<any> {
    return this.http.post("http://localhost:8080/api/v1/cliente", cliente);
   }
 
   //
-  atualizarCliente(cliente: any): Observable<any> {
+  atualizarCliente(cliente: unknown): Observable<any> {
    return this.http.post("http://localhost:8080/api/v1/cliente", cliente);
   }
 

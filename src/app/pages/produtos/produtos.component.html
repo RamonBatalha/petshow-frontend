@@ -1,0 +1,78 @@
+<!-- <section>
+    <h1>Lista de Produtos</h1>
+    <app-button texto="Adicionar"></app-button>
+
+    <div *ngFor="let produto of produtos" class="div-inf-produto" >
+        <p><span>Nome: </span>{{produto.nome}}</p>
+        <p><span>Val.compra: </span>{{produto.valorcompra | currency:'BRL'}}</p>
+        <p><span>Val.Venda: </span>{{produto.valorvenda  | currency:'BRL'}}</p>
+        <p><span>Estoque : </span>{{produto.estoque}}</p>
+        <p><span>cat : </span>{{produto.categoria.nomecategoria}}</p>
+        <p><span>id: </span>{{produto.id}}</p>
+        <div class="div-btn-cliente">
+            <a >
+                <p>
+                    icone
+                </p>
+            </a>
+            <a >
+                <p>icone</p>
+            </a>
+        </div>
+    </div>
+</section> -->
+
+<div class="div-table">
+    <mat-form-field appearance="standard">
+        <mat-label>Filtro</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Ração" #input>
+      </mat-form-field>
+      <app-button texto="Adicionar Produto"></app-button>
+    
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" matSort>
+    
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+            <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+          </ng-container>
+    
+          <ng-container matColumnDef="nome">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>
+            <td mat-cell *matCellDef="let row"> {{row.nome}} </td>
+          </ng-container>
+    
+          <ng-container matColumnDef="val.compra">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Val.compra </th>
+            <td mat-cell *matCellDef="let row"> {{row.valorcompra | currency:"BRL"}} </td>
+          </ng-container>
+    
+          <ng-container matColumnDef="val.venda">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Val.venda </th>
+            <td mat-cell *matCellDef="let row"> {{row.valorvenda | currency:"BRL"}} </td>
+          </ng-container>
+    
+          <ng-container matColumnDef="estoque">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Estoque </th>
+            <td mat-cell *matCellDef="let row"> <a >-</a>{{row.estoque}} <a >+</a></td>
+          </ng-container>
+    
+          <ng-container matColumnDef="cat">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Categoria </th>
+            <td mat-cell *matCellDef="let row"> {{row.categoria.nomecategoria}} </td>
+          </ng-container>
+    
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+          <!-- Row shown when there is no matching data. -->
+          <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">Não existe correspondência para a pesquisa aplicada "{{input.value}}"</td>
+          </tr>
+        </table>
+    
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+      </div>
+</div>
+  
+  

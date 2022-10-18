@@ -1,4 +1,4 @@
-* {
+/* * {
     font-size: 15px;
 }
 
@@ -38,5 +38,34 @@ span {
 .div-btn-cliente {
     display: flex;
     gap: 15px;
+} */
+
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 50%;
+  }
+  
+  /* td, th {
+    width: 25%;
+  } */
+
+  .div-table {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  app-button{
+    margin: 10px;
+  }
+
+  a{
+    cursor: pointer;
 }
 
+a:hover {
+    color: red
+}

@@ -24,6 +24,12 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { LoginComponent } from './pages/login/login.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { ButtonComponent } from './elementos/button/button.component';
+import { ProdutosComponent } from './pages/produtos/produtos.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 
@@ -40,13 +46,20 @@ import { ButtonComponent } from './elementos/button/button.component';
     CreatePetComponent,
     UpdatePetComponent,
     LoginComponent,
-    ButtonComponent
+    ButtonComponent,
+    ProdutosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule,
+   
     FontAwesomeModule, FormsModule, ReactiveFormsModule, NgxMaskModule.forRoot(), provideFirebaseApp(() => initializeApp(environment.firebase)), provideAuth(() => getAuth()), AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [ClientesService, HttpClientModule],
