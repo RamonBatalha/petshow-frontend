@@ -1,33 +1,10 @@
-<!-- <section>
-    <h1>Lista de Produtos</h1>
-    <app-button texto="Adicionar"></app-button>
-
-    <div *ngFor="let produto of produtos" class="div-inf-produto" >
-        <p><span>Nome: </span>{{produto.nome}}</p>
-        <p><span>Val.compra: </span>{{produto.valorcompra | currency:'BRL'}}</p>
-        <p><span>Val.Venda: </span>{{produto.valorvenda  | currency:'BRL'}}</p>
-        <p><span>Estoque : </span>{{produto.estoque}}</p>
-        <p><span>cat : </span>{{produto.categoria.nomecategoria}}</p>
-        <p><span>id: </span>{{produto.id}}</p>
-        <div class="div-btn-cliente">
-            <a >
-                <p>
-                    icone
-                </p>
-            </a>
-            <a >
-                <p>icone</p>
-            </a>
-        </div>
-    </div>
-</section> -->
 
 <div class="div-table">
     <mat-form-field appearance="standard">
         <mat-label>Filtro</mat-label>
         <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Ração" #input>
       </mat-form-field>
-      <app-button texto="Adicionar Produto"></app-button>
+      <app-button texto="Adicionar Produto" routerLink="/create-produto"></app-button>
     
       <div class="mat-elevation-z8">
         <table mat-table [dataSource]="dataSource" matSort>

@@ -14,6 +14,11 @@ export class ProdutosService {
     return this.http.get("http://localhost:8080/api/v1/produtos")
   }
 
+  //Exibir todas as categorias
+  listarCategorias() : Observable<any> {
+    return this.http.get("http://localhost:8080/api/v1/categoria")
+  }
+
   //Exibir todos os produtos
   bucarProdutoPorId(id: number | null) : Observable<any> {
     return this.http.get(`http://localhost:8080/api/v1/produtos/${id}`)

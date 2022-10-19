@@ -11,7 +11,7 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 export class ProdutosComponent implements OnInit {
    
-  produtos: Array<any> = new Array();
+  // produtos: Array<any> = new Array();
    
   //quais colunas teremos na nossa tabela
   displayedColumns: string[] = ['id', 'nome', 'val.compra', 'val.venda','estoque','cat'];
@@ -30,7 +30,7 @@ export class ProdutosComponent implements OnInit {
     this.produtoService.listarProdutos().subscribe(produtos => {
       console.log(produtos)
       //atribuindo o valor ao array
-      this.produtos = produtos;
+      // this.produtos = produtos;
 
 
       //setando configurações da tabela
@@ -42,7 +42,7 @@ export class ProdutosComponent implements OnInit {
     })
   }
   
-  //import da função de fltragem
+  //import da função de filtragem
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();

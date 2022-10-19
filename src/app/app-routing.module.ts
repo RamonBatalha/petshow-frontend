@@ -7,6 +7,7 @@ import { InformacaoClientesComponent } from './pages/clientes/informacao-cliente
 
 import { CreateClienteComponent } from './pages/create/create-cliente/create-cliente.component';
 import { CreatePetComponent } from './pages/create/create-pet/create-pet.component';
+import { CreateProdutoComponent } from './pages/create/create-produto/create-produto.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -17,13 +18,14 @@ import { UpdatePetComponent } from './pages/update/update-pet/update-pet.compone
 const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
   {path: '', redirectTo: 'login', pathMatch: 'full'}, 
+  {path: 'clientes', component: ClientesComponent, canActivate: [AuthGuard]},
   {path: 'create-cliente', component: CreateClienteComponent, canActivate: [AuthGuard]},
-  {path: 'produtos', component: ProdutosComponent, canActivate: [AuthGuard]},
   {path: 'clientes/update-cliente/:id', component: UpdateClienteComponent, canActivate: [AuthGuard]},
   {path: 'info-cliente/:id', component: InformacaoClientesComponent, canActivate: [AuthGuard]},
   {path: 'create-pet/:id', component: CreatePetComponent, canActivate: [AuthGuard]},
   {path: 'update-pet/:id', component: UpdatePetComponent, canActivate: [AuthGuard]},
-  {path: 'clientes', component: ClientesComponent, canActivate: [AuthGuard]},
+  {path: 'produtos', component: ProdutosComponent, canActivate: [AuthGuard]},
+  {path: 'create-produto', component: CreateProdutoComponent, canActivate: [AuthGuard]},
   {path: 'login', component: LoginComponent},
   {path: '**', component: ErrorComponent}
 

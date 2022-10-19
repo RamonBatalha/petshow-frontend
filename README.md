@@ -24,7 +24,7 @@ Outras funcionalidades serão adicionadas com o decorrer do projeto
 ### BackEnd
 
 - Java e Spring Boot
-- Banco de Dados ORACLE
+- Banco de Dados MySQL
 
 ### FronEnd
 
@@ -34,9 +34,10 @@ Outras funcionalidades serão adicionadas com o decorrer do projeto
 
 - CRUD para cadastro de Clientes com validação de formulários e rotas definidas 
 - CRUD para cadastro de Pets com validação de formulários e rotas definidas
-- Todos os dados são armazenados no Banco de Dados ORACLE
+- Todos os dados são armazenados no Banco de Dados MySQL
 - Adicionada validações de formulário e Mascaras para dados numéricos
 - Adicionado a autenticação de usuário com Firebase e configuradas as proteções de rota com o guard
+- Adicionado Cadastro de Produtos e exibição de Lista de Produtos
 
 <img src="./gitimages/adicionarcliente.gif">
 <img src="./gitimages/adicionarpet.gif">
