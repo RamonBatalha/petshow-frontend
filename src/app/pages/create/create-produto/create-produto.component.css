@@ -25,6 +25,10 @@ input {
     width: 50vw;
 }
 
+a:hover {
+    cursor: pointer;
+  }
+
 button {
     width: auto;
     min-width: 150px;
@@ -50,3 +54,7 @@ button[disabled]{
   cursor: default;
 }
 
+.div-select {
+    display: flex;
+    gap: 20px
+}

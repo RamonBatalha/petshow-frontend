@@ -1,8 +1,14 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProdutosService } from 'src/app/services/produtos.service';
+import { faPlus, faMinus, faTrash, faPen } from '@fortawesome/free-solid-svg-icons';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import {MatDialog} from '@angular/material/dialog';
+import { DialogAddEstoqueComponent } from 'src/app/elementos/dialog-add-estoque/dialog-add-estoque.component';
+import { DialogDimEstoqueComponent } from 'src/app/elementos/dialog-dim-estoque/dialog-dim-estoque.component';
+
+
 
 @Component({
   selector: 'app-produtos',
@@ -10,17 +16,22 @@ import {MatTableDataSource} from '@angular/material/table';
   styleUrls: ['./produtos.component.css']
 })
 export class ProdutosComponent implements OnInit {
-   
-  // produtos: Array<any> = new Array();
+  
+  //icones 
+  faplus = faPlus;
+  faminus = faMinus;
+  fatrash = faTrash;
+  fapen = faPen;
+  
    
   //quais colunas teremos na nossa tabela
-  displayedColumns: string[] = ['id', 'nome', 'val.compra', 'val.venda','estoque','cat'];
+  displayedColumns: string[] = ['id', 'nome', 'val.compra', 'val.venda','estoque', 'cat', 'editar'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private produtoService: ProdutosService) { }
+  constructor(private produtoService: ProdutosService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.listarProdutos();
@@ -52,4 +63,21 @@ export class ProdutosComponent implements OnInit {
     }
   }
 
+  entradaEstoque(row: any) {
+    console.log('Entrada de estoque ' + row.nome);
+    //chamando e repassando dados para o dialog
+    this.dialog.open(DialogAddEstoqueComponent, {
+      data: row
+    });
+  }
+
+  saidaEstoque(row: any){
+    console.log('Saida de estoque ' + row.id);
+    //chamando e repassando dados para o dialog
+    this.dialog.open(DialogDimEstoqueComponent, {
+      data: row
+    });
+  }
+
+ 
 }

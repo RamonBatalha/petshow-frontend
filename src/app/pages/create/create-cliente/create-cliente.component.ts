@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ClientesService } from 'src/app/services/clientes.service';
 
 @Component({
@@ -51,7 +52,7 @@ export class CreateClienteComponent implements OnInit {
     
   })
 
-  constructor(private clienteService: ClientesService, private fb: FormBuilder) { }
+  constructor(private clienteService: ClientesService, private fb: FormBuilder, private router: Router) { }
   
   ngOnInit(): void {
   }
@@ -65,6 +66,7 @@ export class CreateClienteComponent implements OnInit {
         //limpando campo de input
         this.formCliente.reset();
         //limpar campo de input
+        
         
       }, err => {
         console.log("Erro ao cadastrar cliente", err)

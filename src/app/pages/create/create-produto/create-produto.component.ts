@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { ProdutosService } from 'src/app/services/produtos.service';
+import {MatDialog} from '@angular/material/dialog';
+import { DialogCategoriaComponent } from 'src/app/elementos/dialog-categoria/dialog-categoria.component';
+
 
 @Component({
   selector: 'app-create-produto',
@@ -8,6 +12,8 @@ import { ProdutosService } from 'src/app/services/produtos.service';
   styleUrls: ['./create-produto.component.css']
 })
 export class CreateProdutoComponent implements OnInit {
+
+  faplus = faPlus;
    
   formProduto = this.fb.group({
     nome: ["", [
@@ -47,7 +53,7 @@ export class CreateProdutoComponent implements OnInit {
    categorias: Array<any> = new Array();
 
 
-  constructor(private fb: FormBuilder, private produtosService: ProdutosService) { }
+  constructor(private fb: FormBuilder, private produtosService: ProdutosService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
         
@@ -81,22 +87,7 @@ export class CreateProdutoComponent implements OnInit {
       })
   }
 
-//   adicionarPet(){
-//     console.log(this.formPet.value)
-//     console.log(this.idCliente)
-//     this.petService.adicionarPet(this.formPet.value).subscribe(pet => {
-//      //mensagem de confimação
-//      console.log("Pet Criado com Sucesso: ");
-//      alert("Pet Criado com Sucesso: ");
-//      //limpando campo de input
-//      this.formPet.reset();
-//      //redirecionar para página do cliente
-//      this.route.navigate([`info-cliente/${pet.cliente.id}`]); 
-     
-//    }, err => {
-//      console.log("Erro ao cadastrar Pet", err)
-
-//    })
-//  }
-
+    openDialog() {
+         this.dialog.open(DialogCategoriaComponent)
+    }
 }

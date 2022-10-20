@@ -73,7 +73,7 @@
     <!-- precisamos adicionar essa div para capturar o valor nested do campo -->
     <!-- ngvalue setamos para pegar apenas o id, que é a Foreign Key da categoria -->
 
-    <div formGroupName="categoria">
+    <div formGroupName="categoria" class="div-select">
          <p>categoria</p>
          <select formControlName="id">
              <label>Order</label>
@@ -81,9 +81,15 @@
              {{ categoria.nomecategoria }}
            </option>
          </select>
+         <div>
+               <a (click)="openDialog()">
+                    <fa-icon [icon]="faplus"></fa-icon>
+               </a>
+         </div>
     </div>
 
         <button type="button" (click)="adicionarProduto()" [disabled]="!formProduto.valid">Adicionar</button>
+        
     </form>
 
     

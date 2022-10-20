@@ -30,7 +30,15 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import {MatDialogModule} from '@angular/material/dialog';
 import { CreateProdutoComponent } from './pages/create/create-produto/create-produto.component';
+import { DialogCategoriaComponent } from './elementos/dialog-categoria/dialog-categoria.component';
+import { DialogAddEstoqueComponent } from './elementos/dialog-add-estoque/dialog-add-estoque.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { DialogDimEstoqueComponent } from './elementos/dialog-dim-estoque/dialog-dim-estoque.component';
+
+
+
 
 
 
@@ -49,7 +57,10 @@ import { CreateProdutoComponent } from './pages/create/create-produto/create-pro
     LoginComponent,
     ButtonComponent,
     ProdutosComponent,
-    CreateProdutoComponent
+    CreateProdutoComponent,
+    DialogCategoriaComponent,
+    DialogAddEstoqueComponent,
+    DialogDimEstoqueComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,7 +72,9 @@ import { CreateProdutoComponent } from './pages/create/create-produto/create-pro
     MatSortModule,
     MatFormFieldModule,
     MatInputModule,
-   
+    MatDialogModule,
+    MatExpansionModule,
+    
     FontAwesomeModule, FormsModule, ReactiveFormsModule, NgxMaskModule.forRoot(), provideFirebaseApp(() => initializeApp(environment.firebase)), provideAuth(() => getAuth()), AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [ClientesService, HttpClientModule],

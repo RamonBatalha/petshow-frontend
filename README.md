@@ -38,10 +38,14 @@ Outras funcionalidades serão adicionadas com o decorrer do projeto
 - Adicionada validações de formulário e Mascaras para dados numéricos
 - Adicionado a autenticação de usuário com Firebase e configuradas as proteções de rota com o guard
 - Adicionado Cadastro de Produtos e exibição de Lista de Produtos
+- Adicionada a funcionalidades de entrada e saida no valor do Estoque
 
-<img src="./gitimages/adicionarcliente.gif">
-<img src="./gitimages/adicionarpet.gif">
-<img src="./gitimages/atualizarInformações.gif">
+<img src="./gitimages/novocliente.gif">
+<img src="./gitimages/addpet.gif">
+<img src="./gitimages/addnovoproduto.gif">
+<img src="./gitimages/attestoque.gif">
+
+
 
 
 

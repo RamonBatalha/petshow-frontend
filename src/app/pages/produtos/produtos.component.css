@@ -25,3 +25,7 @@ table {
   a:hover {
     cursor: pointer;
   }
+
+  .input-estoque {
+    width: 70px
+  }
