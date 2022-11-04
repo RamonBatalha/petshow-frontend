@@ -1,0 +1,79 @@
+<section>
+    <h1>Atualizar Produto</h1>
+    <form [formGroup]="formProduto">
+        <p>Nome</p>
+        <input 
+            type="text" 
+            placeholder="Nome do Produto" 
+            formControlName="nome"
+            [class.valid]="formProduto.controls['nome'].valid"
+            [class.invalid]="formProduto.controls['nome'].invalid && (formProduto.controls['nome'].touched || formProduto.controls['nome'].dirty)"
+            >
+        <div *ngIf="formProduto.controls['nome'].invalid && (formProduto.controls['nome'].touched || formProduto.controls['nome'].dirty)">
+             <small *ngIf="formProduto.controls['nome'].hasError('required')">
+                  Esse campo é obrigatório
+             </small>
+             <small *ngIf="formProduto.controls['nome'].hasError('maxLength')">
+                  Tamanho máximo 30 caracteres
+             </small>
+        </div>
+
+        <p>Valor de Compra</p>
+        <input 
+        type="number"
+        placeholder="Valor de compra" 
+        formControlName="valorcompra"
+        [class.valid]="formProduto.controls['valorcompra'].valid"
+        [class.invalid]="formProduto.controls['valorcompra'].invalid && (formProduto.controls['valorcompra'].touched || formProduto.controls['valorcompra'].dirty)"
+        >
+        <div *ngIf="formProduto.controls['valorcompra'].invalid && (formProduto.controls['valorcompra'].touched || formProduto.controls['valorcompra'].dirty)">
+            <small *ngIf="formProduto.controls['valorcompra'].hasError('required')">
+               Esse campo é obrigatório e deve conter valores numéricos
+            </small>
+            <small *ngIf="formProduto.controls['valorcompra'].hasError('min')">
+               Valor Precisa ser positivo
+            </small>
+       </div>
+
+        <p>Valor de Venda</p>
+        <input 
+        type="number"
+        placeholder="Valor de venda" 
+        formControlName="valorvenda"
+        [class.valid]="formProduto.controls['valorvenda'].valid"
+        [class.invalid]="formProduto.controls['valorvenda'].invalid && (formProduto.controls['valorvenda'].touched || formProduto.controls['valorvenda'].dirty)"
+        >
+        <div *ngIf="formProduto.controls['valorvenda'].invalid && (formProduto.controls['valorvenda'].touched || formProduto.controls['valorvenda'].dirty)">
+            <small *ngIf="formProduto.controls['valorvenda'].hasError('required')">
+               Esse campo é obrigatório e deve conter valores numéricos
+            </small>
+            <small *ngIf="formProduto.controls['valorvenda'].hasError('min')">
+               Valor Precisa ser positivo
+            </small>
+       </div>
+
+
+    <!-- precisamos adicionar essa div para capturar o valor nested do campo -->
+    <!-- ngvalue setamos para pegar apenas o id, que é a Foreign Key da categoria -->
+
+    <div formGroupName="categoria" class="div-select">
+         <p>categoria</p>
+         <select formControlName="id">
+             <label>Order</label>
+           <option *ngFor="let categoria of categorias" [ngValue]="categoria.id" >
+             {{ categoria.nomecategoria }}
+           </option>
+         </select>
+         <div>
+               <a (click)="openDialog()">
+                    <fa-icon [icon]="faplus"></fa-icon>
+               </a>
+         </div>
+    </div>
+
+        <button type="button" (click)="updateProduto()" [disabled]="!formProduto.valid">Atualizar</button>
+        
+    </form>
+
+    
+</section>

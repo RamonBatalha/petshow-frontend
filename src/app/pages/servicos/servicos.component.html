@@ -1,0 +1,10 @@
+<h1>Lista de Serviços</h1>
+
+<div *ngFor="let servico of servicos">
+    <p>{{servico.descricao}}</p>
+    <p>{{servico.status}}</p>
+    <p>{{servico.status_pagamento}}</p>
+    <p>{{servico.data}}</p>
+    <p>{{servico.pet.nome}}</p>
+    <p>{{servico.pet.cliente.nome}}</p>
+</div>

@@ -1,0 +1,53 @@
+*{
+    font-size: 18px;
+}
+
+p {
+    margin: 5px 0px;
+}
+
+small {
+    color: red;
+}
+
+div {
+    margin: 5px 0px;
+}
+
+input {
+    width: 50vw;
+}
+
+a:hover {
+    cursor: pointer;
+  }
+
+button {
+    width: auto;
+    min-width: 150px;
+    height: 35px;
+    background-color: #0a2775;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+button:hover {
+    cursor: pointer;
+    background-color: #113597;
+    
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: default;
+}
+
+.div-select {
+    display: flex;
+    gap: 20px
+}

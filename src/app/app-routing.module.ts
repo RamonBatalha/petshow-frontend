@@ -12,6 +12,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProdutosComponent } from './pages/produtos/produtos.component';
+import { ServicosComponent } from './pages/servicos/servicos.component';
 import { UpdateClienteComponent } from './pages/update/update-cliente/update-cliente.component';
 import { UpdatePetComponent } from './pages/update/update-pet/update-pet.component';
 
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'update-pet/:id', component: UpdatePetComponent, canActivate: [AuthGuard]},
   {path: 'produtos', component: ProdutosComponent, canActivate: [AuthGuard]},
   {path: 'create-produto', component: CreateProdutoComponent, canActivate: [AuthGuard]},
+  {path: 'servicos', component: ServicosComponent, canActivate: [AuthGuard]},
   {path: 'login', component: LoginComponent},
   {path: '**', component: ErrorComponent}
 

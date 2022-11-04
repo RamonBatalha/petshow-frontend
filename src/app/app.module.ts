@@ -36,6 +36,8 @@ import { DialogCategoriaComponent } from './elementos/dialog-categoria/dialog-ca
 import { DialogAddEstoqueComponent } from './elementos/dialog-add-estoque/dialog-add-estoque.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { DialogDimEstoqueComponent } from './elementos/dialog-dim-estoque/dialog-dim-estoque.component';
+import { ServicosComponent } from './pages/servicos/servicos.component';
+import { DialogUpdateProdutoComponent } from './elementos/dialog-update-produto/dialog-update-produto.component';
 
 
 
@@ -61,6 +63,8 @@ import { DialogDimEstoqueComponent } from './elementos/dialog-dim-estoque/dialog
     DialogCategoriaComponent,
     DialogAddEstoqueComponent,
     DialogDimEstoqueComponent,
+    ServicosComponent,
+    DialogUpdateProdutoComponent,
   ],
   imports: [
     BrowserModule,

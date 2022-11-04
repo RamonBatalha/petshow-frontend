@@ -36,7 +36,7 @@ export class ProdutosService {
 
   //método para atualizar produto
   atualizarProduto(produto: any): Observable<any> {
-   return this.http.post("http://localhost:8080/api/v1/produtos", produto);
+   return this.http.put("http://localhost:8080/api/v1/produtos", produto);
   }
 
   // recebe a url de requisição e o objeto que vai ser passado

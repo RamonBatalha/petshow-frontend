@@ -7,6 +7,7 @@ import {MatTableDataSource} from '@angular/material/table';
 import {MatDialog} from '@angular/material/dialog';
 import { DialogAddEstoqueComponent } from 'src/app/elementos/dialog-add-estoque/dialog-add-estoque.component';
 import { DialogDimEstoqueComponent } from 'src/app/elementos/dialog-dim-estoque/dialog-dim-estoque.component';
+import { DialogUpdateProdutoComponent } from 'src/app/elementos/dialog-update-produto/dialog-update-produto.component';
 
 
 
@@ -40,10 +41,7 @@ export class ProdutosComponent implements OnInit {
   listarProdutos() {
     this.produtoService.listarProdutos().subscribe(produtos => {
       console.log(produtos)
-      //atribuindo o valor ao array
-      // this.produtos = produtos;
-
-
+      
       //setando configurações da tabela
       this.dataSource = new MatTableDataSource(produtos);
       this.dataSource.paginator = this.paginator;
@@ -75,6 +73,13 @@ export class ProdutosComponent implements OnInit {
     console.log('Saida de estoque ' + row.id);
     //chamando e repassando dados para o dialog
     this.dialog.open(DialogDimEstoqueComponent, {
+      data: row
+    });
+  }
+
+  updateProduto(row: any){
+    //chamando e repassando dados para o dialog
+    this.dialog.open(DialogUpdateProdutoComponent, {
       data: row
     });
   }

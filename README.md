@@ -37,7 +37,7 @@ Outras funcionalidades serão adicionadas com o decorrer do projeto
 - Todos os dados são armazenados no Banco de Dados MySQL
 - Adicionada validações de formulário e Mascaras para dados numéricos
 - Adicionado a autenticação de usuário com Firebase e configuradas as proteções de rota com o guard
-- Adicionado Cadastro de Produtos e exibição de Lista de Produtos
+- Adicionado Cadastro e atualização de Produtos e exibição de Lista de Produtos
 - Adicionada a funcionalidades de entrada e saida no valor do Estoque
 
 <img src="./gitimages/novocliente.gif">
